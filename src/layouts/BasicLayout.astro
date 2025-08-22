@@ -20,7 +20,7 @@ const schema =
     ? {
         "@context": "http://schema.org",
         "@type": "Person",
-        name: "Gianmarco",
+        name: "Jasmine",
         url: Astro.url.origin,
         sameAs: [LINKS.linkedin, LINKS.github],
         image: `${Astro.url.origin}/og-image.png`,
@@ -30,13 +30,13 @@ const schema =
           name: "Self-Employed",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Italy",
-            addressCountry: "IT",
+            addressLocality: "United States of America",
+            addressCountry: "US",
           },
         },
         nationality: {
           "@type": "Country",
-          name: "Italy",
+          name: "United States of America",
         },
       }
     : {
@@ -51,13 +51,13 @@ const schema =
         image: `${Astro.url.origin}/og-image.png`, //TODO: dynamic
         author: {
           "@type": "Person",
-          name: "Gianmarco",
+          name: "Jasmine",
           url: Astro.url.origin,
           sameAs: [LINKS.linkedin, LINKS.github],
         },
         publisher: {
           "@type": "Organization",
-          name: "Gianmarco",
+          name: "Jasmine Creates",
           logo: {
             "@type": "ImageObject",
             url: `${Astro.url.origin}/og-image.png`,
@@ -103,6 +103,9 @@ const schema =
       set:html={JSON.stringify(schema)}
       type="application/ld+json"
     />
+<script defer src="https://cloud.umami.is/script.js" data-website-id="151dbabf-5f3b-439a-baac-354050cddd5e">
+</script>
+
   </head>
   <body
     class="bg-darkslate-700 md:h-screen flex flex-col justify-center items-center"

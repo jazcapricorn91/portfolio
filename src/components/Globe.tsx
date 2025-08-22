@@ -6,16 +6,14 @@ const GlobeComponent = () => {
   let mapContainer: HTMLDivElement | undefined;
 
   const visitedCountries = [
-    "France",
-    "China",
-    "Italy",
-    "Sri Lanka",
-    "Turkey",
+    "Japan",
+    "Spain",
+    "Switzerland",
+    "Brazil",
+    "Puerto Rico",
     "Greece",
-    "Malta",
-    "Hungary",
     "Portugal",
-    "Marocco",
+    "Morocco",
   ];
 
   onMount(() => {
@@ -61,7 +59,7 @@ const GlobeComponent = () => {
       .append("path")
       .attr("d", (d: any) => pathGenerator(d as any))
       .attr("fill", (d: { properties: { name: string } }) =>
-        visitedCountries.includes(d.properties.name) ? "#E63946" : "white"
+        visitedCountries.includes(d.properties.name) ? "#e639d8ff" : "white"
       )
       .style("stroke", "black")
       .style("stroke-width", 0.3)
